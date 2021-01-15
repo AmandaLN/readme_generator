@@ -8,17 +8,20 @@ const renderLicenseBadge = (license) => {
   if (license === 'BSD 3' ) license ='[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]';
   if (license === 'NONE' ) license ='';
 
-
+  return license
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+
 const renderLicenseLink = (license) => {
   if (license === 'APACHE 2.0') license = '(https://opensource.org/licenses/Apache-2.0)';
   if (license === 'MIT') license = '(https://opensource.org/licenses/MIT)';
   if (license === 'GPL 3.0') license = '(https://www.gnu.org/licenses/gpl-3.0)';
   if (license === 'BSD 3') license = '(https://opensource.org/licenses/BSD-3-Clause)';
   if (license === 'NONE' ) license ='';
+
+  return license
 }
 
 // TODO: Create a function that returns the license section of README
@@ -37,10 +40,13 @@ const generateMarkdown = (data) => {
   
   
   return `# ${data.title}
+  ${liceBadge}${liceLink} 
 
-​   ## Description
-${data.description}
-​
+
+  ## Description
+  ${data.description}
+
+
 
  ## Table of Contents 
 ​
@@ -55,10 +61,13 @@ ${data.description}
 * [Tests](#tests)
 ​
 * [Questions](#questions)
+
+
 ​
 ## Installation
 ​
 ${data.installation}
+
 
 ​
 ## Usage
@@ -71,8 +80,13 @@ ${liceSection}
  ## Contributing
 ​ ${data.contributing}
 
+
+
 ## Tests
 ${data.test}
+
+
+
 
 ## Questions
 ​
