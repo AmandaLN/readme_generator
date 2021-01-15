@@ -1,7 +1,7 @@
 # ReadMe Generator
 
 ## Description
-This weather dashboard with give you current weather, UV Index, and 5 day forecast. The cities you search for will save under the search bar in listed order.
+This will create a ReadMe generator by using the user answers from prompted questions. 
 
 
 
